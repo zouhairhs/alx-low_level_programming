@@ -1,17 +1,22 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-int main() {
-    std::srand(std::time(nullptr)); // initialize random seed
-    int n = std::rand() % RAND_MAX - RAND_MAX/2; // generate random number
-    std::cout << n << std::endl;
-    if (n > 0) {
-        std::cout << "is positive" << std::endl;
-    } else if (n == 0) {
-        std::cout << "is zero" << std::endl;
-    } else {
-        std::cout << "is negative" << std::endl;
-    }
-    return 0;
+int main(void) 
+{
+    int n;
+    srand(time(NULL));  // Seed the random number generator with the current time
+    n = rand() % 201 - 100;  // Generate a random integer between -100 and 100
+    printf("The number %d is ", n);
+    if (n > 0)
+{
+        printf("positive.\n");
+} else if (n < 0) 
+{
+        printf("negative.\n");
+} else 
+{
+        printf("zero.\n");
+}
+    return (0);
 }
