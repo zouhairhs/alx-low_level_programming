@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include "main.h"
 
 /**
  * _putchar - writes the character c to stdout
@@ -13,13 +12,77 @@ int _putchar(char c)
   return (write(1, &c, 1));
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cat > main.h
+
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char c);
+void print_alphabet(void);
+void print_alphabet_x10(void);
+int _islower(int c);
+int _isalpha(int c);
+int print_sign(int n);
+int _abs(int);
+int print_last_digit(int);
+void jack_bauer(void);
+void times_table(void);
+int add(int, int);
+void print_to_98(int n);
+void print_times_table(int n);
+
+#endif
+
+
+cat > 0-putchar.c
+
+#include "main.h"
+
+/**
+ * main - print putchar
+ * Return: always 0
+ */
+
 int main(void)
 {
-  _putchar('H');
-  _putchar('e');
-  _putchar('l');
-  _putchar('l');
-  _putchar('o');
-  _putchar('\n');
-  return (0);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+
+	return (0);
+
 }
