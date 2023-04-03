@@ -1,28 +1,46 @@
-/*                                                                                                                                   
- * File: 0-memset.c                                                                                                                  
- * Auth: not                                                                                                                         
- */                                                                                                                                  
-                                                                                                                                     
-#include "main.h"                                                                                                                    
-                                                                                                                                     
-/**                                                                                                                                  
- * _memset - Fills the first n bytes of the memory area                                                                              
- *          pointed to by @s with the constant byte @c.                                                                              
- * @s: A pointer to the memory area to be filled.                                                                                    
- * @c: The character to fill the memory area with.                                                                                   
- * @n: The number of bytes to be filled.                                                                                             
- * description _memset: over there                                                                                                   
- *                                                                                                                                   
- * Return: A pointer to the filled memory area @s.                                                                                   
- *                                                                                                                                   
- */                                                                                                                                  
-void *_memset(void *s, int c, size_t n)                                                                                              
-{                                                                                                                                    
-        unsigned int index;                                                                                                          
-        unsigned char *memory = s, value = c;                                                                                        
-                                                                                                                                     
-        for (index = 0; index < n; index++)                                                                                          
-                memory[index] = value;                                                                                               
-                                                                                                                                     
-        return (memory);                                                                                                             
+#include "main.h"
+/**
+ * _memset - fill a block of memory with a specific value
+ * @s: starting address of memory to be filled
+ * @b: the desired value
+ * @n: number of bytes to be changed
+ *
+ * Return: changed array with new value for n bytes
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	int i = 0;
+
+	for (; n > 0; i++)
+	{
+		s[i] = b;
+		n--;
+	}
+	return (s);
+}
+
+
+1-memcpy.c
+
+#include "main.h"
+/**
+ * _memcpy - a function that copies memory area
+ * @dest: memory where is stored
+ * @src: memory where is copied
+ * *@n: number of bytes
+ *
+ * Return: copied memory with n byted changed
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	int r = 0;
+	int i = n;
+
+	for (; r < i; r++)
+	{
+		dest[r] = src[r];
+		n--;
+	}
+	return (dest);
 }
